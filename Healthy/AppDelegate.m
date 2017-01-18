@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Parse/Parse.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,34 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+        configuration.applicationId = @"Healthy";
+        configuration.server = @"http://mondays.kr:1340/Healthy";
+        configuration.clientKey = @"Healthy";
+        configuration.localDatastoreEnabled = YES;
+    }]];
+    
+//    PFObject *gameScore = [PFObject objectWithClassName:@"Tits"];
+//    gameScore[@"score"] = @1337;
+//    gameScore[@"playerName"] = @"Sean Plott";
+//    gameScore[@"cheatMode"] = @NO;
+//    [gameScore saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (succeeded) {
+//            NSLog(@"OK SAVED");
+//            // The object has been saved.
+//            PFQuery *query = [PFQuery queryWithClassName:@"Tits"];
+//            [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+//                NSLog(@"Found %ld Objects", objects.count);
+//                [objects enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//                    NSLog(@"OB:%@", obj);
+//                }];
+//            }];
+//        } else {
+//            NSLog(@"NOT OK><>...");
+//            NSLog(@"ERROR:%@", error.localizedDescription);
+//        }
+//    }];
+
     return YES;
 }
 

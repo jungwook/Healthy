@@ -9,10 +9,26 @@
 /* Begin PBXBuildFile section */
 		124E01EF1E1E012200A998CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E01EE1E1E012200A998CA /* main.m */; };
 		124E01F21E1E012200A998CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E01F11E1E012200A998CA /* AppDelegate.m */; };
-		124E01F51E1E012200A998CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E01F41E1E012200A998CA /* ViewController.m */; };
-		124E01F81E1E012200A998CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124E01F61E1E012200A998CA /* Main.storyboard */; };
 		124E01FA1E1E012200A998CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124E01F91E1E012200A998CA /* Assets.xcassets */; };
 		124E01FD1E1E012200A998CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124E01FB1E1E012200A998CA /* LaunchScreen.storyboard */; };
+		124E02061E1E023100A998CA /* Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E02051E1E023100A998CA /* Calendar.m */; };
+		124E02291E1F38C900A998CA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124E02261E1F38C900A998CA /* Bolts.framework */; };
+		124E022A1E1F38C900A998CA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124E02271E1F38C900A998CA /* Parse.framework */; };
+		124E022B1E1F38C900A998CA /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124E02281E1F38C900A998CA /* ParseUI.framework */; };
+		124E022D1E1F38E700A998CA /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 124E022C1E1F38E700A998CA /* libsqlite3.0.tbd */; };
+		124E022F1E1F38F300A998CA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124E022E1E1F38F300A998CA /* CFNetwork.framework */; };
+		124E02311E1F390000A998CA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124E02301E1F390000A998CA /* SystemConfiguration.framework */; };
+		124E02351E1F391C00A998CA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124E02341E1F391C00A998CA /* AudioToolbox.framework */; };
+		124E02381E1F60DD00A998CA /* ModalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E02371E1F60DD00A998CA /* ModalAnimator.m */; };
+		124E023B1E1F60EE00A998CA /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E023A1E1F60EE00A998CA /* ModalViewController.m */; };
+		124E023D1E1F611900A998CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124E023C1E1F611900A998CA /* CoreGraphics.framework */; };
+		124E023F1E1F614500A998CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124E023E1E1F614500A998CA /* UIKit.framework */; };
+		124E02411E1F616F00A998CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124E02401E1F616F00A998CA /* QuartzCore.framework */; };
+		124E02481E28A0CC00A998CA /* UIViewController+YSLTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E02451E28A0CC00A998CA /* UIViewController+YSLTransition.m */; };
+		124E02491E28A0CC00A998CA /* YSLTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E02471E28A0CC00A998CA /* YSLTransitionAnimator.m */; };
+		124E024D1E28B34300A998CA /* CollectionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E024B1E28B34300A998CA /* CollectionDetailViewController.m */; };
+		124E02501E28B38C00A998CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124E024F1E28B38C00A998CA /* Main.storyboard */; };
+		124E02521E2F371100A998CA /* CollectionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 124E02511E2F371100A998CA /* CollectionDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +36,34 @@
 		124E01EE1E1E012200A998CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		124E01F01E1E012200A998CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		124E01F11E1E012200A998CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		124E01F31E1E012200A998CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		124E01F41E1E012200A998CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		124E01F71E1E012200A998CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		124E01F91E1E012200A998CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		124E01FC1E1E012200A998CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		124E01FE1E1E012200A998CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		124E02041E1E023100A998CA /* Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calendar.h; sourceTree = "<group>"; };
+		124E02051E1E023100A998CA /* Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calendar.m; sourceTree = "<group>"; };
+		124E02261E1F38C900A998CA /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		124E02271E1F38C900A998CA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		124E02281E1F38C900A998CA /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		124E022C1E1F38E700A998CA /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		124E022E1E1F38F300A998CA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		124E02301E1F390000A998CA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		124E02321E1F390D00A998CA /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		124E02341E1F391C00A998CA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		124E02361E1F60DD00A998CA /* ModalAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalAnimator.h; sourceTree = "<group>"; };
+		124E02371E1F60DD00A998CA /* ModalAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalAnimator.m; sourceTree = "<group>"; };
+		124E02391E1F60EE00A998CA /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		124E023A1E1F60EE00A998CA /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		124E023C1E1F611900A998CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		124E023E1E1F614500A998CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		124E02401E1F616F00A998CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		124E02441E28A0CC00A998CA /* UIViewController+YSLTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YSLTransition.h"; sourceTree = "<group>"; };
+		124E02451E28A0CC00A998CA /* UIViewController+YSLTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YSLTransition.m"; sourceTree = "<group>"; };
+		124E02461E28A0CC00A998CA /* YSLTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSLTransitionAnimator.h; sourceTree = "<group>"; };
+		124E02471E28A0CC00A998CA /* YSLTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLTransitionAnimator.m; sourceTree = "<group>"; };
+		124E024A1E28B34300A998CA /* CollectionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionDetailViewController.h; sourceTree = "<group>"; };
+		124E024B1E28B34300A998CA /* CollectionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionDetailViewController.m; sourceTree = "<group>"; };
+		124E024F1E28B38C00A998CA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		124E02511E2F371100A998CA /* CollectionDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +71,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				124E02411E1F616F00A998CA /* QuartzCore.framework in Frameworks */,
+				124E023F1E1F614500A998CA /* UIKit.framework in Frameworks */,
+				124E023D1E1F611900A998CA /* CoreGraphics.framework in Frameworks */,
+				124E02351E1F391C00A998CA /* AudioToolbox.framework in Frameworks */,
+				124E02311E1F390000A998CA /* SystemConfiguration.framework in Frameworks */,
+				124E022F1E1F38F300A998CA /* CFNetwork.framework in Frameworks */,
+				124E022D1E1F38E700A998CA /* libsqlite3.0.tbd in Frameworks */,
+				124E022B1E1F38C900A998CA /* ParseUI.framework in Frameworks */,
+				124E022A1E1F38C900A998CA /* Parse.framework in Frameworks */,
+				124E02291E1F38C900A998CA /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +92,7 @@
 			children = (
 				124E01EC1E1E012200A998CA /* Healthy */,
 				124E01EB1E1E012200A998CA /* Products */,
+				124E02071E1F302600A998CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,11 +107,22 @@
 		124E01EC1E1E012200A998CA /* Healthy */ = {
 			isa = PBXGroup;
 			children = (
+				124E02511E2F371100A998CA /* CollectionDetailViewController.xib */,
+				124E024A1E28B34300A998CA /* CollectionDetailViewController.h */,
+				124E024B1E28B34300A998CA /* CollectionDetailViewController.m */,
+				124E02441E28A0CC00A998CA /* UIViewController+YSLTransition.h */,
+				124E02451E28A0CC00A998CA /* UIViewController+YSLTransition.m */,
+				124E02461E28A0CC00A998CA /* YSLTransitionAnimator.h */,
+				124E02471E28A0CC00A998CA /* YSLTransitionAnimator.m */,
 				124E01F01E1E012200A998CA /* AppDelegate.h */,
 				124E01F11E1E012200A998CA /* AppDelegate.m */,
-				124E01F31E1E012200A998CA /* ViewController.h */,
-				124E01F41E1E012200A998CA /* ViewController.m */,
-				124E01F61E1E012200A998CA /* Main.storyboard */,
+				124E02041E1E023100A998CA /* Calendar.h */,
+				124E02051E1E023100A998CA /* Calendar.m */,
+				124E02361E1F60DD00A998CA /* ModalAnimator.h */,
+				124E02371E1F60DD00A998CA /* ModalAnimator.m */,
+				124E02391E1F60EE00A998CA /* ModalViewController.h */,
+				124E023A1E1F60EE00A998CA /* ModalViewController.m */,
+				124E024F1E28B38C00A998CA /* Main.storyboard */,
 				124E01F91E1E012200A998CA /* Assets.xcassets */,
 				124E01FB1E1E012200A998CA /* LaunchScreen.storyboard */,
 				124E01FE1E1E012200A998CA /* Info.plist */,
@@ -77,6 +137,24 @@
 				124E01EE1E1E012200A998CA /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		124E02071E1F302600A998CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				124E02401E1F616F00A998CA /* QuartzCore.framework */,
+				124E023E1E1F614500A998CA /* UIKit.framework */,
+				124E023C1E1F611900A998CA /* CoreGraphics.framework */,
+				124E02341E1F391C00A998CA /* AudioToolbox.framework */,
+				124E02321E1F390D00A998CA /* CoreAudio.framework */,
+				124E02301E1F390000A998CA /* SystemConfiguration.framework */,
+				124E022E1E1F38F300A998CA /* CFNetwork.framework */,
+				124E022C1E1F38E700A998CA /* libsqlite3.0.tbd */,
+				124E02261E1F38C900A998CA /* Bolts.framework */,
+				124E02271E1F38C900A998CA /* Parse.framework */,
+				124E02281E1F38C900A998CA /* ParseUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +188,7 @@
 				TargetAttributes = {
 					124E01E91E1E012200A998CA = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = A52TMCAM33;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,8 +217,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				124E01FD1E1E012200A998CA /* LaunchScreen.storyboard in Resources */,
+				124E02521E2F371100A998CA /* CollectionDetailViewController.xib in Resources */,
 				124E01FA1E1E012200A998CA /* Assets.xcassets in Resources */,
-				124E01F81E1E012200A998CA /* Main.storyboard in Resources */,
+				124E02501E28B38C00A998CA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,23 +230,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				124E01F51E1E012200A998CA /* ViewController.m in Sources */,
 				124E01F21E1E012200A998CA /* AppDelegate.m in Sources */,
 				124E01EF1E1E012200A998CA /* main.m in Sources */,
+				124E024D1E28B34300A998CA /* CollectionDetailViewController.m in Sources */,
+				124E02491E28A0CC00A998CA /* YSLTransitionAnimator.m in Sources */,
+				124E02481E28A0CC00A998CA /* UIViewController+YSLTransition.m in Sources */,
+				124E023B1E1F60EE00A998CA /* ModalViewController.m in Sources */,
+				124E02381E1F60DD00A998CA /* ModalAnimator.m in Sources */,
+				124E02061E1E023100A998CA /* Calendar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		124E01F61E1E012200A998CA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				124E01F71E1E012200A998CA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		124E01FB1E1E012200A998CA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -270,6 +347,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A52TMCAM33;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Healthy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.smartly.Healthy;
@@ -281,6 +363,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A52TMCAM33;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Healthy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.smartly.Healthy;
