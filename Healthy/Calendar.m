@@ -20,7 +20,7 @@
 
 @interface DayCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UILabel *dayLabel;
-
+@property (strong, nonatomic) NSDate* today;
 @end
 
 @implementation DayCell
@@ -250,8 +250,10 @@ CGFloat widthForNumberOfCells(UICollectionView* cv, UICollectionViewFlowLayout *
     NSDateComponents *todayComponents = [self dateComponentsForDate:[NSDate date]];
     
     BOOL inRange = (indexPath.row >= startOffset) && (indexPath.row < startOffset + numberOfDaysInIndexMonth);
+    
     cell.dayLabel.text = [NSString stringWithFormat:@"%ld", currDateComponents.day];
     cell.dayLabel.font = inRange ? [UIFont boldSystemFontOfSize:18] : [UIFont boldSystemFontOfSize:16];
+    cell.today = currDate;
     
     if (currDateComponents.year == todayComponents.year && currDateComponents.month == todayComponents.month && currDateComponents.day== todayComponents.day) {
         cell.dayLabel.backgroundColor = [UIColor colorWithRed:240/255.f green:82/255.f blue:44/255.f alpha:1.0];
@@ -273,6 +275,10 @@ CGFloat widthForNumberOfCells(UICollectionView* cv, UICollectionViewFlowLayout *
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CollectionDetailViewController *vc = [[CollectionDetailViewController alloc]init];
+    
+    DayCell *cell = (DayCell*)[collectionView cellForItemAtIndexPath:indexPath];
+    vc.today = cell.today;
+    
     [self.navigationController pushViewController:vc animated:YES];
     
     return;

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@import AVKit;
+@import AVFoundation;
 
-@interface CollectionDetailViewController : UIViewController
 
+@interface CollectionDetailViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, AVCaptureVideoDataOutputSampleBufferDelegate, UITableViewDelegate, UITableViewDataSource>
+@property (strong, nonatomic) NSDate* today;
 @end
