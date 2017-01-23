@@ -92,7 +92,7 @@
     }];
 }
 
-#define fWORKOUT    @"Workout"
+#define fWORKOUT    @"Workout" 
 #define fType       @"Type"
 #define fUnit       @"Unit"
 #define fFirstUnit  @"FirstUnit"
