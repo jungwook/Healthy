@@ -11,6 +11,6 @@
 @import AVFoundation;
 
 
-@interface CollectionDetailViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, AVCaptureVideoDataOutputSampleBufferDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface CollectionDetailViewController : UIViewController <AVCaptureVideoDataOutputSampleBufferDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) NSDate* today;
 @end

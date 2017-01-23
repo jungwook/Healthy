@@ -9,7 +9,6 @@
 #import "CollectionDetailViewController.h"
 #import "YSLTransitionAnimator.h"
 #import "UIViewController+YSLTransition.h"
-#import "WorkoutCell.h"
 
 @import Parse;
 
@@ -20,7 +19,6 @@
 @property (strong, nonatomic) NSArray *history;
 
 @property (weak, nonatomic) IBOutlet UILabel *monthLabel;
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) AVCaptureSession *captureSession;
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer *previewLayer;
 @end
@@ -53,28 +51,40 @@
     
 }
 
-- (void) initializeCollectionView
-{
-    [self.collectionView registerNib:[UINib nibWithNibName:@"WorkoutCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"WorkoutCell"];
-    self.collectionView.backgroundView.backgroundColor = [UIColor clearColor];
-    self.collectionView.backgroundColor = [UIColor clearColor];
-    self.collectionView.backgroundView = nil;
-}
-
 - (void) initializeTableView
 {
     [self.tableView registerNib:[UINib nibWithNibName:@"HistoryCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"HistoryCell"];
+}
+
+- (NSDate*) startOfToday
+{
+    NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitWeekday fromDate:self.today];
+    
+    return [[NSCalendar currentCalendar] dateFromComponents:dateComponents];
+}
+
+- (NSDate*) endOfToday
+{
+    NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitWeekday fromDate:self.today];
+    
+    dateComponents.day = dateComponents.day + 1;
+    
+    return [[NSCalendar currentCalendar] dateFromComponents:dateComponents];
 }
 
 - (void) initializeHistory
 {
     PFQuery *query = [PFQuery queryWithClassName:@"History"];
     
-    NSDate *startDate;
-    NSDate *endDate;
+    
+    
+    NSDate *startDate = [self startOfToday];
+    NSDate *endDate = [self endOfToday];
+    
+    NSLog(@"Between %@ and %@", [startDate descriptionWithLocale:[NSLocale currentLocale]], [endDate descriptionWithLocale:[NSLocale currentLocale]]);
     
     [query whereKey:@"Date" greaterThanOrEqualTo:startDate];
-    [query whereKey:@"Date" lessThanOrEqualTo:endDate];
+    [query whereKey:@"Date" lessThan:endDate];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         self.history = objects;
@@ -92,7 +102,7 @@
     }];
 }
 
-#define fWORKOUT    @"Workout" 
+#define fWORKOUT    @"Workout"
 #define fType       @"Type"
 #define fUnit       @"Unit"
 #define fFirstUnit  @"FirstUnit"
@@ -107,7 +117,6 @@
     [self initializeNavigationBarAndItems];
 
     [self initCapture];
-    [self initializeCollectionView];
     [self initializeWorkouts];
     [self initializeTableView];
     [self initializeHistory];
@@ -141,16 +150,6 @@
 - (UIView *)pushTransitionImageView
 {
     return nil;
-}
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-    return 1;
-}
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return self.workouts.count;
 }
 
 - (void)initCapture
@@ -201,11 +200,6 @@
     NSLog(@"SWIVEL CAMERA");
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    return CGSizeMake(120, 120);
-}
-
 - (void) initializeWorkouts
 {
     PFQuery *q = [PFQuery queryWithClassName:@"Workout"];
@@ -213,7 +207,6 @@
         self.workouts = objects;
         if (objects.count) {
             NSLog(@"SUCCESS");
-            [self.collectionView reloadData];
         }
         else {
             [self saveData];
@@ -221,12 +214,6 @@
     }];
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    WorkoutCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"WorkoutCell" forIndexPath:indexPath];
-    [cell setWorkoutObject:self.workouts[indexPath.row]];
-    return cell;
-}
 - (void) saveData
 {
     self.workouts = @[

@@ -196,12 +196,13 @@ CGFloat widthForNumberOfCells(UICollectionView* cv, UICollectionViewFlowLayout *
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    NSLog(@"Returning months passed:%ld", self.monthsPassed);
     return self.monthsPassed;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)monthIndex
 {
+    //    return 42;
+    
     NSDate *firstDayOfIndexMonth = [self firstDayOfMonthForIndex:monthIndex];
     NSDate *lastDayOfIndexMonth = [self lastDayOfMonthForIndex:monthIndex];
     NSUInteger numberOfDaysInIndexMonth = [self numberOfDaysInTheMonthForDate:lastDayOfIndexMonth];
@@ -211,7 +212,6 @@ CGFloat widthForNumberOfCells(UICollectionView* cv, UICollectionViewFlowLayout *
     NSUInteger endOffset = 7-lastDayOfIndexMonthComponents.weekday;
     NSUInteger numberOfCells = startOffset + numberOfDaysInIndexMonth + endOffset;
     return numberOfCells;
-//    return 42;
 }
 
 - (UICollectionReusableView*) collectionView:(UICollectionView *)collectionView
@@ -274,14 +274,12 @@ CGFloat widthForNumberOfCells(UICollectionView* cv, UICollectionViewFlowLayout *
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CollectionDetailViewController *vc = [[CollectionDetailViewController alloc]init];
-    
+    Today *todayVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Today"];
     DayCell *cell = (DayCell*)[collectionView cellForItemAtIndexPath:indexPath];
-    vc.today = cell.today;
     
-    [self.navigationController pushViewController:vc animated:YES];
+    todayVC.today = cell.today;
     
-    return;
+    [self.navigationController pushViewController:todayVC animated:YES];
 }
 
 - (UIImage*)imageCell:(UIView*)label
@@ -306,6 +304,7 @@ CGFloat widthForNumberOfCells(UICollectionView* cv, UICollectionViewFlowLayout *
     DayCell *cell = (DayCell *)[self.collectionView cellForItemAtIndexPath:[[self.collectionView indexPathsForSelectedItems] firstObject]];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:cellFrameInSuperview];
     [imageView setImage:[self imageCell:cell]];
+    
     return imageView;
 }
 

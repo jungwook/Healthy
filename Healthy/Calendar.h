@@ -10,6 +10,7 @@
 #import "YSLTransitionAnimator.h"
 #import "UIViewController+YSLTransition.h"
 #import "CollectionDetailViewController.h"
+#import "Today.h"
 
 @interface Calendar : UICollectionViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, YSLTransitionAnimatorDataSource>
 

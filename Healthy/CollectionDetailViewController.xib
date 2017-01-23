@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CollectionDetailViewController">
             <connections>
-                <outlet property="collectionView" destination="JxU-9L-gEj" id="LG1-X4-MYW"/>
                 <outlet property="iconImageView" destination="MSo-au-nbj" id="NLR-gs-shN"/>
                 <outlet property="monthLabel" destination="nxY-IK-INP" id="Ggg-OA-JKI"/>
                 <outlet property="tableView" destination="yAg-X6-3k8" id="QSJ-KI-qfZ"/>
@@ -47,33 +46,14 @@
                         <outlet property="delegate" destination="-1" id="RZ9-K6-iNi"/>
                     </connections>
                 </tableView>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="JxU-9L-gEj">
-                    <rect key="frame" x="0.0" y="616" width="414" height="120"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="120" id="bkG-fc-BWA"/>
-                    </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="cCe-9m-SKA">
-                        <size key="itemSize" width="50" height="50"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="CsE-bE-S47"/>
-                        <outlet property="delegate" destination="-1" id="oQa-Th-d3N"/>
-                    </connections>
-                </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="JxU-9L-gEj" secondAttribute="trailing" id="0cQ-y4-xzo"/>
                 <constraint firstItem="MSo-au-nbj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="93a-Gm-ILL"/>
                 <constraint firstItem="nxY-IK-INP" firstAttribute="trailing" secondItem="MSo-au-nbj" secondAttribute="trailing" id="Fes-yf-n95"/>
                 <constraint firstItem="yAg-X6-3k8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="IhN-4N-JMY"/>
-                <constraint firstItem="JxU-9L-gEj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JUe-sA-VlH"/>
                 <constraint firstItem="MSo-au-nbj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="VSu-ZO-bt2"/>
                 <constraint firstAttribute="bottom" secondItem="yAg-X6-3k8" secondAttribute="bottom" id="Vip-eK-l0Q"/>
-                <constraint firstAttribute="bottom" secondItem="JxU-9L-gEj" secondAttribute="bottom" id="XRw-HU-m4Q"/>
                 <constraint firstAttribute="trailing" secondItem="yAg-X6-3k8" secondAttribute="trailing" id="iVg-tu-hpm"/>
                 <constraint firstItem="nxY-IK-INP" firstAttribute="top" secondItem="MSo-au-nbj" secondAttribute="bottom" id="mzM-kT-6kf"/>
                 <constraint firstItem="yAg-X6-3k8" firstAttribute="leading" secondItem="MSo-au-nbj" secondAttribute="trailing" constant="8" id="nBV-kY-tqA"/>

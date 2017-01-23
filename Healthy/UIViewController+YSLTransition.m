@@ -95,6 +95,7 @@ static BOOL isScrollView = NO;
                                                                             style:UIBarButtonItemStylePlain
                                                                            target:self
                                                                            action:@selector(returnAction:)];
+    
     if (color) {
         self.navigationItem.leftBarButtonItem.tintColor = color;
     } else {

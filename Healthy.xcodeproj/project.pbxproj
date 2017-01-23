@@ -29,8 +29,8 @@
 		124E024D1E28B34300A998CA /* CollectionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E024B1E28B34300A998CA /* CollectionDetailViewController.m */; };
 		124E02501E28B38C00A998CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124E024F1E28B38C00A998CA /* Main.storyboard */; };
 		124E02521E2F371100A998CA /* CollectionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 124E02511E2F371100A998CA /* CollectionDetailViewController.xib */; };
-		124E02541E31BDC600A998CA /* WorkoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 124E02531E31BDC600A998CA /* WorkoutCell.xib */; };
-		124E02571E31BDDF00A998CA /* WorkoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E02561E31BDDF00A998CA /* WorkoutCell.m */; };
+		124E025A1E35964900A998CA /* Today.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E02591E35964900A998CA /* Today.m */; };
+		124E025D1E35BB6A00A998CA /* AddWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E025C1E35BB6A00A998CA /* AddWorkout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,9 +66,10 @@
 		124E024B1E28B34300A998CA /* CollectionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionDetailViewController.m; sourceTree = "<group>"; };
 		124E024F1E28B38C00A998CA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		124E02511E2F371100A998CA /* CollectionDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionDetailViewController.xib; sourceTree = "<group>"; };
-		124E02531E31BDC600A998CA /* WorkoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkoutCell.xib; sourceTree = "<group>"; };
-		124E02551E31BDDF00A998CA /* WorkoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutCell.h; sourceTree = "<group>"; };
-		124E02561E31BDDF00A998CA /* WorkoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutCell.m; sourceTree = "<group>"; };
+		124E02581E35964900A998CA /* Today.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Today.h; sourceTree = "<group>"; };
+		124E02591E35964900A998CA /* Today.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Today.m; sourceTree = "<group>"; };
+		124E025B1E35BB6A00A998CA /* AddWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWorkout.h; sourceTree = "<group>"; };
+		124E025C1E35BB6A00A998CA /* AddWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWorkout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +113,6 @@
 		124E01EC1E1E012200A998CA /* Healthy */ = {
 			isa = PBXGroup;
 			children = (
-				124E02531E31BDC600A998CA /* WorkoutCell.xib */,
-				124E02551E31BDDF00A998CA /* WorkoutCell.h */,
-				124E02561E31BDDF00A998CA /* WorkoutCell.m */,
 				124E02511E2F371100A998CA /* CollectionDetailViewController.xib */,
 				124E024A1E28B34300A998CA /* CollectionDetailViewController.h */,
 				124E024B1E28B34300A998CA /* CollectionDetailViewController.m */,
@@ -126,6 +124,10 @@
 				124E01F11E1E012200A998CA /* AppDelegate.m */,
 				124E02041E1E023100A998CA /* Calendar.h */,
 				124E02051E1E023100A998CA /* Calendar.m */,
+				124E02581E35964900A998CA /* Today.h */,
+				124E02591E35964900A998CA /* Today.m */,
+				124E025B1E35BB6A00A998CA /* AddWorkout.h */,
+				124E025C1E35BB6A00A998CA /* AddWorkout.m */,
 				124E02361E1F60DD00A998CA /* ModalAnimator.h */,
 				124E02371E1F60DD00A998CA /* ModalAnimator.m */,
 				124E02391E1F60EE00A998CA /* ModalViewController.h */,
@@ -227,7 +229,6 @@
 				124E01FD1E1E012200A998CA /* LaunchScreen.storyboard in Resources */,
 				124E02521E2F371100A998CA /* CollectionDetailViewController.xib in Resources */,
 				124E01FA1E1E012200A998CA /* Assets.xcassets in Resources */,
-				124E02541E31BDC600A998CA /* WorkoutCell.xib in Resources */,
 				124E02501E28B38C00A998CA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +241,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				124E01F21E1E012200A998CA /* AppDelegate.m in Sources */,
+				124E025D1E35BB6A00A998CA /* AddWorkout.m in Sources */,
+				124E025A1E35964900A998CA /* Today.m in Sources */,
 				124E01EF1E1E012200A998CA /* main.m in Sources */,
 				124E024D1E28B34300A998CA /* CollectionDetailViewController.m in Sources */,
 				124E02491E28A0CC00A998CA /* YSLTransitionAnimator.m in Sources */,
@@ -247,7 +250,6 @@
 				124E023B1E1F60EE00A998CA /* ModalViewController.m in Sources */,
 				124E02381E1F60DD00A998CA /* ModalAnimator.m in Sources */,
 				124E02061E1E023100A998CA /* Calendar.m in Sources */,
-				124E02571E31BDDF00A998CA /* WorkoutCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
