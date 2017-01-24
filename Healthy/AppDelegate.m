@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "Parse/Parse.h"
+@import Parse;
+#import "History.h"
 
 @interface AppDelegate ()
 
@@ -24,6 +25,8 @@
         configuration.clientKey = @"Healthy";
         configuration.localDatastoreEnabled = YES;
     }]];
+    
+    [History new];
     
 //    PFObject *gameScore = [PFObject objectWithClassName:@"Tits"];
 //    gameScore[@"score"] = @1337;

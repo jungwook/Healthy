@@ -31,6 +31,7 @@
 		124E02521E2F371100A998CA /* CollectionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 124E02511E2F371100A998CA /* CollectionDetailViewController.xib */; };
 		124E025A1E35964900A998CA /* Today.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E02591E35964900A998CA /* Today.m */; };
 		124E025D1E35BB6A00A998CA /* AddWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E025C1E35BB6A00A998CA /* AddWorkout.m */; };
+		124E02601E370AEB00A998CA /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = 124E025F1E370AEB00A998CA /* History.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,8 @@
 		124E02591E35964900A998CA /* Today.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Today.m; sourceTree = "<group>"; };
 		124E025B1E35BB6A00A998CA /* AddWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWorkout.h; sourceTree = "<group>"; };
 		124E025C1E35BB6A00A998CA /* AddWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWorkout.m; sourceTree = "<group>"; };
+		124E025E1E370AEB00A998CA /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
+		124E025F1E370AEB00A998CA /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 		124E01EC1E1E012200A998CA /* Healthy */ = {
 			isa = PBXGroup;
 			children = (
+				124E025E1E370AEB00A998CA /* History.h */,
+				124E025F1E370AEB00A998CA /* History.m */,
 				124E02511E2F371100A998CA /* CollectionDetailViewController.xib */,
 				124E024A1E28B34300A998CA /* CollectionDetailViewController.h */,
 				124E024B1E28B34300A998CA /* CollectionDetailViewController.m */,
@@ -245,6 +250,7 @@
 				124E025A1E35964900A998CA /* Today.m in Sources */,
 				124E01EF1E1E012200A998CA /* main.m in Sources */,
 				124E024D1E28B34300A998CA /* CollectionDetailViewController.m in Sources */,
+				124E02601E370AEB00A998CA /* History.m in Sources */,
 				124E02491E28A0CC00A998CA /* YSLTransitionAnimator.m in Sources */,
 				124E02481E28A0CC00A998CA /* UIViewController+YSLTransition.m in Sources */,
 				124E023B1E1F60EE00A998CA /* ModalViewController.m in Sources */,

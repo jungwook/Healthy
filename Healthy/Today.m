@@ -7,7 +7,7 @@
 //
 
 #import "Today.h"
-#import "AddWorkout.h"
+#import "History.h"
 
 @interface Today ()
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
@@ -64,10 +64,17 @@
     AddWorkout *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AddWorkout"];
     
     [self presentViewController:vc animated:YES completion:^{
-        
+        vc.parent = self;
     }];
 }
 
+#pragma mark AddWorkoutDelegate
+
+- (void)addWorkout:(id)workout
+{
+    NSLog(@"ADDING WORKOUT:%@", workout);
+    [History addWorkoutToHistory:workout];
+}
 
 /*
 #pragma mark - Navigation

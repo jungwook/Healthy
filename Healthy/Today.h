@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "YSLTransitionAnimator.h"
 #import "UIViewController+YSLTransition.h"
+#import "AddWorkout.h"
 
-@interface Today : UIViewController <YSLTransitionAnimatorDataSource>
+@interface Today : UIViewController <YSLTransitionAnimatorDataSource, AddWorkoutDelegate>
 @property (nonatomic, strong) NSDate* today;
 @end

@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddWorkout : UIViewController
+@protocol AddWorkoutDelegate <NSObject>
+@required
+- (void)addWorkout:(id)workout;
+@end
 
+@interface AddWorkout : UIViewController
+@property (weak, nonatomic) id <AddWorkoutDelegate> parent;
 @end
